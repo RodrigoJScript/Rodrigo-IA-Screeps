@@ -153,6 +153,10 @@ module.exports.loop = function () {
             spawn.room.energyAvailable, 'harvester');
         }
       }
+      else if (numberOfManagers < spawn.memory.minManagers) {
+        // try to spawn one
+        name = spawn.createCustomManager(energyDivide);
+      }
       else if (numberOfLongDistanceHarvester < spawn.memory.minLongDistanceHarvester) {
         name = spawn.createCustomCreep(energyDivide, "longDistanceHarvester");
       }
@@ -169,10 +173,6 @@ module.exports.loop = function () {
       else if (numberOfUpgraders < spawn.memory.minUpgraders) {
         // try to spawn one
         name = spawn.createCustomCreep(energyDivide, 'upgrader');
-      }
-      else if (numberOfManagers < spawn.memory.minManagers) {
-        // try to spawn one
-        name = spawn.createCustomManager(energyDivide);
       }
       else if (numberOfMiner < spawn.memory.minMiner) {
         name = spawn.createCustomMiner(energyDivide);
@@ -220,6 +220,10 @@ module.exports.loop = function () {
             spawn.room.energyAvailable, 'harvester');
         }
       }
+      else if (numberOfManagers < spawn.memory.minManagers) {
+        // try to spawn one
+        name = spawn.createCustomManager(energy);
+      }
       else if (numberOfLongDistanceHarvester < spawn.memory.minLongDistanceHarvester) {
         name = spawn.createCustomCreep(energy, "longDistanceHarvester");
       }
@@ -236,10 +240,6 @@ module.exports.loop = function () {
       else if (numberOfUpgraders < spawn.memory.minUpgraders) {
         // try to spawn one
         name = spawn.createCustomCreep(energy, 'upgrader');
-      }
-      else if (numberOfManagers < spawn.memory.minManagers) {
-        // try to spawn one
-        name = spawn.createCustomManager(energy);
       }
       else if (numberOfMiner < spawn.memory.minMiner) {
         name = spawn.createCustomMiner(energy);
