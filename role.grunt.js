@@ -6,7 +6,7 @@ module.exports = {
                 if (creep.pos.roomName === flag.pos.roomName) {
                     var target = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
                     if (target) {
-                        if (target.owner.username !== "ChicoFlex") {
+                        if (hostileCreep.owner.username !== "ChicoFlex" || hostileCreep.owner.username !== "Jackroos") {
                             if (creep.memory.target) {
                                 var target = Game.getObjectById(creep.memory.target);
                                 if (target) {

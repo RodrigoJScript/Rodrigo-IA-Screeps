@@ -4,7 +4,7 @@ StructureTower.prototype.defend =
     function () {
         var hostileCreep = this.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
         if (hostileCreep) {
-            if (hostileCreep.owner.username !== "ChicoFlex") {
+            if (hostileCreep.owner.username !== "ChicoFlex" || hostileCreep.owner.username !== "Jackroos") {
                 if (hostileCreep) {
                     this.attack(hostileCreep);
                     return;

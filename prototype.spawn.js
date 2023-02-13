@@ -464,9 +464,10 @@ StructureSpawn.prototype.createCustomGrunt = function (energy) {
 
 StructureSpawn.prototype.createCustomChansey = function (energy) {
   // create a balanced body as big as possible with the given energy
-  var numberOfParts = Math.floor(energy / 300);
+  var numberOfParts = Math.floor(energy / 550);
   var bodyC = [];
   for (let i = 0; i < numberOfParts; i++) {
+    bodyC.push(HEAL);
     bodyC.push(HEAL);
   }
   for (let i = 0; i < numberOfParts; i++) {
